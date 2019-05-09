@@ -44,16 +44,7 @@ class BinarySearchTree:
         while current.right:
             current = current.right  
         return current.value
-    
-    def for_each(self, cb, node="initial"):
-        if node == "initial":
-              node = self
-        if node == None:
-              return
-        cb(node.value)
-        self.for_each(cb, node.left)
-        self.for_each(cb, node.right)
-        
+
     def for_each(self, cb, node="root"):
         # treats each node like a tree
         if node == "root":
